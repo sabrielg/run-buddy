@@ -509,7 +509,7 @@ section {
      line-height: 1.6;
  }
 
- .checkbox-wrapper label::before, .radio-wrapper::before {
+ .checkbox-wrapper label::before, .radio-wrapper label::before {
      content: "";
      height: 20px;
      width: 20px;
@@ -533,7 +533,7 @@ section {
      position: absolute;
      left: -29px;
      top: -3px;
-     background-image: radial-gradient(circle, #39a6b2, #024e76);
+     background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
  }
 
  .checkbox-wrapper label::after {
@@ -550,5 +550,10 @@ section {
 
 .checkbox-wrapper input + label::after,
 .radio-wrapper input +label::after {
+    content: none;
+}
+
+.checkbox-wrapper input:checked +label::after,
+.radio-wrapper input:checked +label::after {
     content: "";
 }
